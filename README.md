@@ -1,4 +1,4 @@
-# Laporan Proyek Machine Learning - Nama Anda
+# Laporan Proyek Akhir - Machine Learning - Nazrul Effendy
 
 ## Project Overview
 
