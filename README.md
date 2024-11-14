@@ -12,9 +12,7 @@ Tahun 2021 telah terjadi lonjakan MOOC karena adanya pandemi Covid-19. Dengan te
 
 ## Business Understanding
 
-Pada bagian ini, Anda perlu menjelaskan proses klarifikasi masalah.
-
-Bagian laporan ini mencakup:
+Kumpulan data ini diambil dari informasi yang tersedia untuk umum di situs web Coursera pada bulan September 2021 dan dimasukkan secara manual jika data diambil secara tidak benar. Kumpulan data ini dapat digunakan dalam Sistem Rekomendasi untuk mempromosikan kursus Coursera berdasarkan Tingkat Kesulitan dan Keterampilan yang dibutuhkan.
 
 ### Problem Statements
 
