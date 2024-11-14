@@ -39,8 +39,6 @@ Semua poin di atas harus diuraikan dengan jelas. Anda bebas menuliskan berapa pe
 ## Data Understanding
 Dataset yang digunakan berasal dari kaggle di link [Coursera Courses Dataset 2021](https://www.kaggle.com/datasets/khusheekapoor/coursera-courses-dataset-2021/data).
 
-Selanjutnya, uraikanlah seluruh variabel atau fitur pada data. Sebagai contoh:  
-
 Berikut penjelasan mengenai variabel-variabel pada kolom dataset:
 | Variabel | Deskripsi |
 | --- | --- |
