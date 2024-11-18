@@ -2,11 +2,11 @@
 
 ## Project Overview
 
-Tahun 2021 telah terjadi lonjakan MOOC karena adanya pandemi Covid-19. Dengan tersedianya banyak sumber daya baik yang berbayar maupun gratis di internet, para pembelajar memiliki cukup banyak pilihan course yang perlu dipelajari. Proyek ini dilaksanakan untuk membuat Sistem Rekomendasi dan merekomendasikan kursus kepada siswa berdasarkan Keterampilan dan Tingkat Kesulitan yang dipilih oleh siswa. Tautan Kursus juga disediakan, yang dapat ditawarkan oleh Sistem Rekomendasi dengan akses yang mudah. [Zhen and Wang 2024](https://doi.org/10.1016/j.heliyon.2024.e38907), [Zhao et al. 2024](https://doi.org/10.1016/j.procs.2024.08.255), [Ma et al. 2024](https://doi.org/10.1016/j.ipm.2024.103750)
+Tahun 2021 telah terjadi pandemi Covid-19. Pada masa pandemi ini, banyak kuliah maupun pelatihan yang tidak dapat dilaksankan secara offline, sehingga lebih banyak dilaksanakan secara online untuk pencegahan penyebaran Covid-19 tersebut. Hal ini mendorong munculnya cukup banyak fasilitas MOOC (Massive Open Online Courses). Dengan tersedianya banyak sumber daya belara secara online tersebut baik yang berbayar maupun gratis, para pembelajar memiliki cukup banyak pilihan course yang perlu dipelajari. Karena itu diperlukan suatu sistem yang dapat memberikan rekomendasi course yang sesuai dengan siswa tersebut. Proyek ini dilaksanakan untuk memberikan rekomendasi course  kepada siswa berdasarkan Keterampilan dan Tingkat Kesulitan yang dipilih oleh siswa. Sistem rekomendasi course yang dibuat menggunakan pendekatan content-based filtering. 
 
 **Rubrik/Kriteria Tambahan (Opsional)**:
-- Jelaskan mengapa proyek ini penting untuk diselesaikan.
-- Menyertakan hasil riset terkait atau referensi. Referensi yang diberikan harus berasal dari sumber yang kredibel dan author yang jelas.
+- Proyek ini perlu dilaksanakan untuk memberikan rekomendasi course yang sesuai dengan keterampilan dan tingkat kesulitas siswa sehingga diharapkan dapat membantu siswa dalam memilih course di antara pilihan yang cukup banyak tersebut.
+- Hasil-hasil riset yang terkait dengan projek ini antara lain adalah yang dilakukan oleh [Zhen and Wang 2024](https://doi.org/10.1016/j.heliyon.2024.e38907), [Zhao et al. 2024](https://doi.org/10.1016/j.procs.2024.08.255), [Ma et al. 2024](https://doi.org/10.1016/j.ipm.2024.103750).
   
 **Referensi:**
 1. Ma, Wenjun, Wen Chen, Liuxing Lu, and Xiaomao Fan. 2024. “Integrating Learners’ Knowledge Background to Improve Course Recommendation Fairness: A Multi-Graph Recommendation Method Based on Contrastive Learning.” Information Processing & Management 61 (4): 103750. https://doi.org/10.1016/j.ipm.2024.103750.
@@ -16,7 +16,7 @@ Tahun 2021 telah terjadi lonjakan MOOC karena adanya pandemi Covid-19. Dengan te
 
 ## Business Understanding
 
-Kumpulan data ini diambil dari informasi yang tersedia untuk umum di situs web Coursera pada bulan September 2021 dan dimasukkan secara manual jika data diambil secara tidak benar. Kumpulan data ini dapat digunakan dalam Sistem Rekomendasi untuk mempromosikan kursus Coursera berdasarkan Tingkat Kesulitan dan Keterampilan yang dibutuhkan.
+Proyek ini dilakukan untuk memberikan rekomendasi courses yang sesuai dengan siswa yang diberi rekomendasi. 
 
 ### Problem Statements
 
@@ -41,7 +41,7 @@ Semua poin di atas harus diuraikan dengan jelas. Anda bebas menuliskan berapa pe
     - Mengajukan 2 atau lebih solution approach (algoritma atau pendekatan sistem rekomendasi).
 
 ## Data Understanding
-Dataset yang digunakan berasal dari kaggle di link [Coursera Courses Dataset 2021](https://www.kaggle.com/datasets/khusheekapoor/coursera-courses-dataset-2021/data).
+Dataset yang digunakan berasal dari kaggle di link [Coursera Courses Dataset 2021](https://www.kaggle.com/datasets/khusheekapoor/coursera-courses-dataset-2021/data). Kumpulan data ini diambil dari informasi yang tersedia untuk umum di situs web Coursera pada bulan September 2021 dan dimasukkan secara manual jika terjadi kekeliruan scrapping tersebut. 
 
 Berikut penjelasan mengenai variabel-variabel pada kolom dataset:
 | Variabel | Deskripsi |
