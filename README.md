@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-Tahun 2021 telah terjadi lonjakan MOOC karena adanya pandemi Covid-19. Dengan tersedianya banyak sumber daya baik yang berbayar maupun gratis di internet, para pembelajar menjadi kewalahan untuk mempelajari keterampilan baru. Oleh karena itu, dataset ini dapat digunakan untuk membuat Sistem Rekomendasi dan merekomendasikan kursus kepada siswa berdasarkan Keterampilan dan Tingkat Kesulitan yang dimasukkan oleh siswa. Tautan Kursus juga disediakan, yang dapat ditawarkan oleh Sistem Rekomendasi dengan akses yang mudah.
+Tahun 2021 telah terjadi lonjakan MOOC karena adanya pandemi Covid-19. Dengan tersedianya banyak sumber daya baik yang berbayar maupun gratis di internet, para pembelajar memiliki cukup banyak pilihan course yang perlu dipelajari. Oleh karena itu, dataset ini dapat digunakan untuk membuat Sistem Rekomendasi dan merekomendasikan kursus kepada siswa berdasarkan Keterampilan dan Tingkat Kesulitan yang dimasukkan oleh siswa. Tautan Kursus juga disediakan, yang dapat ditawarkan oleh Sistem Rekomendasi dengan akses yang mudah.
 
 **Rubrik/Kriteria Tambahan (Opsional)**:
 - Jelaskan mengapa proyek ini penting untuk diselesaikan.
