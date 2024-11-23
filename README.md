@@ -20,14 +20,12 @@ Proyek ini dilakukan untuk memberikan rekomendasi courses yang sesuai dengan sis
 
 ### Problem Statements
 
-Menjelaskan pernyataan masalah:
-- Pernyataan Masalah 1
-- Pernyataan Masalah 2
-- Pernyataan Masalah n
+Problem statement pada proyek ini:
+- Course apa yang direkomendasikan sesuai dengan kata kunci yang diberikan oleh pengguna ?
 
 ### Goals
 
-Menjelaskan tujuan proyek yang menjawab pernyataan masalah:
+Tujuan proyek ini:
 - Jawaban pernyataan masalah 1
 - Jawaban pernyataan masalah 2
 - Jawaban pernyataan masalah n
