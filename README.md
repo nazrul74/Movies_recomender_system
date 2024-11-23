@@ -5,7 +5,7 @@
 Tahun 2021 telah terjadi pandemi Covid-19. Pada masa pandemi ini, banyak kuliah maupun pelatihan yang tidak dapat dilaksankan secara offline, sehingga lebih banyak dilaksanakan secara online untuk pencegahan penyebaran Covid-19 tersebut. Hal ini mendorong munculnya cukup banyak fasilitas MOOC (Massive Open Online Courses). Dengan tersedianya banyak sumber daya belara secara online tersebut baik yang berbayar maupun gratis, para pembelajar memiliki cukup banyak pilihan course yang perlu dipelajari. Karena itu diperlukan suatu sistem yang dapat memberikan rekomendasi course yang sesuai dengan siswa tersebut. Proyek ini dilaksanakan untuk memberikan rekomendasi course  kepada siswa berdasarkan Keterampilan dan Tingkat Kesulitan yang dipilih oleh siswa. Sistem rekomendasi course yang dibuat menggunakan pendekatan content-based filtering. 
 
 **Rubrik/Kriteria Tambahan (Opsional)**:
-- Proyek ini perlu dilaksanakan untuk memberikan rekomendasi course yang sesuai dengan keterampilan dan tingkat kesulitas siswa sehingga diharapkan dapat membantu siswa dalam memilih course di antara pilihan yang cukup banyak tersebut.
+- Proyek ini perlu dilaksanakan untuk memberikan rekomendasi course yang sesuai dengan kata kunci yang diberikan oleh pengguna (siswa) sehingga diharapkan dapat membantu siswa dalam memilih course di antara pilihan yang cukup banyak tersebut.
 - Hasil-hasil riset yang terkait dengan projek ini antara lain adalah yang dilakukan oleh [Zhen and Wang 2024](https://doi.org/10.1016/j.heliyon.2024.e38907), [Zhao et al. 2024](https://doi.org/10.1016/j.procs.2024.08.255), [Ma et al. 2024](https://doi.org/10.1016/j.ipm.2024.103750).
   
 **Referensi:**
