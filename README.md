@@ -26,9 +26,7 @@ Problem statement pada proyek ini:
 ### Goals
 
 Tujuan proyek ini:
-- Jawaban pernyataan masalah 1
-- Jawaban pernyataan masalah 2
-- Jawaban pernyataan masalah n
+- memberikan rekomendasi course yang dapat diambil sesuai dengan kata kunci yang diberikan oleh pengguna berbasis content.
 
 Semua poin di atas harus diuraikan dengan jelas. Anda bebas menuliskan berapa pernyataan masalah dan juga goals yang diinginkan.
 
