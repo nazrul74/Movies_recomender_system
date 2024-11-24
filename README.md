@@ -16,7 +16,7 @@ Tahun 2021 telah terjadi pandemi Covid-19. Pada masa pandemi ini, banyak kuliah 
 
 ## Business Understanding
 
-Proyek ini dilakukan untuk memberikan rekomendasi courses yang sesuai dengan siswa yang diberi rekomendasi. 
+Proyek ini dilakukan untuk memberikan rekomendasi course yang sesuai dengan siswa yang diberi rekomendasi. 
 
 ### Problem Statements
 
@@ -28,13 +28,8 @@ Problem statement pada proyek ini:
 Tujuan proyek ini:
 - memberikan rekomendasi course yang dapat diambil sesuai dengan kata kunci yang diberikan oleh pengguna berbasis content.
 
-Semua poin di atas harus diuraikan dengan jelas. Anda bebas menuliskan berapa pernyataan masalah dan juga goals yang diinginkan.
-
-**Rubrik/Kriteria Tambahan (Opsional)**:
-- Menambahkan bagian “Solution Approach” yang menguraikan cara untuk meraih goals. Bagian ini dibuat dengan ketentuan sebagai berikut: 
-
-    ### Solution statements
-    - Mengajukan 2 atau lebih solution approach (algoritma atau pendekatan sistem rekomendasi).
+## Solution statements
+- Pada proyek ini, diajukan penyelesaian masalah tersebut dengan sistem rekomendasi berbasis konten.
 
 ## Data Understanding
 Dataset yang digunakan berasal dari kaggle di link [Coursera Courses Dataset 2021](https://www.kaggle.com/datasets/khusheekapoor/coursera-courses-dataset-2021/data). Kumpulan data ini diambil dari informasi yang tersedia untuk umum di situs web Coursera pada bulan September 2021 dan dimasukkan secara manual jika terjadi kekeliruan scrapping tersebut. 
