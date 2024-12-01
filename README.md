@@ -53,7 +53,26 @@ Beberapa tahapan yang dilakukan untuk memahami data, antara lain:
 print("Size of dataset: ", df.shape)
 ```
 
-3. 
+2. Mencari jumlah baris yang ada duplikasi dengan baris yang lain:
+
+```
+print("Number of duplicated rows: ", df.duplicated().sum())
+```
+
+3. Menampilkan tipe data setiap kolom pada dataset "df":
+
+```
+df.info()
+```
+
+4. Pengecekan jumlah variabel yang bernilai Null
+
+```
+df.isnull().sum()
+```
+
+5. 
+6. 
 
 ## Data Preparation
 Teknik data preparation yang dilakukan terdiri dari: 
