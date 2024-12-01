@@ -145,22 +145,122 @@ new_df["description_key_words"].iloc[5]
 ```
 
 ## Modeling
-Tahapan ini membahas mengenai model sisten rekomendasi yang Anda buat untuk menyelesaikan permasalahan. Sajikan top-N recommendation sebagai output.
+Sistem rekomendasi untuk menyelesaikan permasalahan ini dibuat berbasis konten. 
 
-**Rubrik/Kriteria Tambahan (Opsional)**: 
-- Menyajikan dua solusi rekomendasi dengan algoritma yang berbeda.
-- Menjelaskan kelebihan dan kekurangan dari solusi/pendekatan yang dipilih.
+1. Mendefinisikan my_lematizer dan mendefinisikan fungsi PreprocessText
+
+```
+my_lematizer = WordNetLemmatizer()
+
+def PreprocessText(text):
+
+    cleaned_text = re.sub(r'-',' ',text)
+
+    # remove  urls
+    cleaned_text = re.sub(r'https?://\S+|www\.\S+|http?://\S+',' ',cleaned_text)
+    # remove html tags
+    cleaned_text = re.sub(r'<.*?>',' ',cleaned_text)
+    # replace all numbers
+    cleaned_text = re.sub(r'[0-9]', '', cleaned_text)
+    # filtering out miscellaneous text.
+    cleaned_text = re.sub(r"\([^()]*\)", "", cleaned_text)
+    # remove mentions
+    cleaned_text = re.sub('@\S+', '', cleaned_text)
+    # removes ponctuations
+    cleaned_text = re.sub('[%s]' % re.escape("""!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~"""), '', cleaned_text)
+
+    cleaned_text = re.sub(r'ML',' Machine Learning ',cleaned_text)
+
+    cleaned_text = re.sub(r'DL',' Deep Learning ',cleaned_text)
+
+    cleaned_text = cleaned_text.lower() #
+    cleaned_text = cleaned_text.split()
+
+    # apply lematisation
+    cleaned_text = ' '.join([my_lematizer.lemmatize(word) for word in cleaned_text])
+
+    return cleaned_text
+```
+
+2. Download 'wordnet' dan 'omw-1.4' dari nltk
+
+```
+nltk.download('wordnet')
+nltk.download('omw-1.4')
+```
+
+3. Menerapkan pemrosesan teks pada description_key_words dan menampilkan hasilnya pada iloc 5
+
+```
+new_df["description_key_words"] = new_df["description_key_words"].apply(PreprocessText)
+new_df["description_key_words"].iloc[5]
+```
+
+4. Vectorization
+
+```
+vectorizer = CountVectorizer(max_features=10000, stop_words='english')
+vectors = vectorizer.fit_transform(new_df["description_key_words"]).toarray()
+```
+
+5. Menampilkan bentuk matriks feature dan ukuran kamus
+
+```
+print("Shape of feature  matrix: ", vectors.shape)
+print("Vocabulary size : ", len(vectorizer.vocabulary_))
+```
+
+6. Membuat fungsi course_id_recommended
+
+```
+def course_id_recommended(description, vectorizer, vectors, number_of_recommendation=5):
+    # preprocess text
+    description = [PreprocessText(description)]
+
+    # do vectorization
+    vect = vectorizer.transform(description)
+
+    # compute similarity with other feature vectors
+    similars_vectors = cosine_similarity(vect, vectors)[0]
+
+    # We sort the similarity values in ascending order(The result is a list of indices)
+    ordered_similars_vectors = list(similars_vectors.argsort())
+
+    # We reverse to order
+    reverse_ordered_similars_vectors = [index for index in reversed(ordered_similars_vectors)]
+
+    # We select the number_of_recommendation indices corresponding to the highest similarity coeficients
+    best_indexs = reverse_ordered_similars_vectors[1:number_of_recommendation]
+
+    return best_indexs
+```
+
+7. Membuat fungsi recommend_me
+
+```
+def recommend_me(description):
+    course_index = course_id_recommended(description, vectorizer, vectors, number_of_recommendation=10)
+    if course_index != None:
+        course_to_recommend = list(new_df.iloc[course_index]["Course_Name"])
+        print("Courses yang direkomendasikan ke user: ")
+        print("------------------------------------------------------------------")
+        for i, course in enumerate(course_to_recommend):
+            print(f"\t{i+1}- {course}")
+        print("------------------------------------------------------------------")
+    else:
+        print("Tidak ada course yang direkomendasikan ke anda")
+```
+
+8. Menampikan top 9 course yang direkomendasikan ke user dari kata kunci "Python programming
+
+```
+recommend_me("Python programming")
+```
+
+Dari coding di atas, muncul top 9 courses yang direkomendasikan, yaitu:
+<p align="center">
+  <img src="https://github.com/nazrul74/courses_recomender_system/blob/main/img/rekomendasi.JPG?raw=true"/>
+</p>
 
 ## Evaluation
-Pada bagian ini Anda perlu menyebutkan metrik evaluasi yang digunakan. Kemudian, jelaskan hasil proyek berdasarkan metrik evaluasi tersebut.
-
-Ingatlah, metrik evaluasi yang digunakan harus sesuai dengan konteks data, problem statement, dan solusi yang diinginkan.
-
-**Rubrik/Kriteria Tambahan (Opsional)**: 
-- Menjelaskan formula metrik dan bagaimana metrik tersebut bekerja.
-
-**---Ini adalah bagian akhir laporan---**
-
-_Catatan:_
-- _Anda dapat menambahkan gambar, kode, atau tabel ke dalam laporan jika diperlukan. Temukan caranya pada contoh dokumen markdown di situs editor [Dillinger](https://dillinger.io/), [Github Guides: Mastering markdown](https://guides.github.com/features/mastering-markdown/), atau sumber lain di internet. Semangat!_
-- Jika terdapat penjelasan yang harus menyertakan code snippet, tuliskan dengan sewajarnya. Tidak perlu menuliskan keseluruhan kode project, cukup bagian yang ingin dijelaskan saja.
+Dari hasil pengujian di atas, diperoleh bahwa 9 course yang direkomendasikan semuanya mengandung kata "Python", sehingga dapat diperoleh tingkat kebenaran rekomendasi tersebut adalah sebesar 9 / 9 atau 100% benar.
