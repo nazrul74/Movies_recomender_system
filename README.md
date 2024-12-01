@@ -71,8 +71,11 @@ df.info()
 df.isnull().sum()
 ```
 
-5. 
-6. 
+5. Melihat statistik dataset:
+
+```
+df.describe()
+```
 
 ## Data Preparation
 Teknik data preparation yang dilakukan terdiri dari: 
@@ -89,11 +92,57 @@ df.duplicated().sum()
 df.columns
 ```
 
-3. 
+3. Membuat suatu fungsi untuk mengganti nama kolom pada suatu dataset
 
-**Rubrik/Kriteria Tambahan (Opsional)**: 
-- Menjelaskan proses data preparation yang dilakukan
-- Menjelaskan alasan mengapa diperlukan tahapan data preparation tersebut.
+```
+def rename_col(col_name):
+    col_name = col_name.split(' ')
+    col_name = '_'.join(col_name)
+    return col_name
+```
+
+4. Menampilkan nama kolom sebelum rename, melakukan renama nama kolom dan menampilkan nama kolom setelah rename:
+
+```
+print("Columns names before renaming: ", df.columns.to_list())
+df.columns = [rename_col(col) for col in df.columns]
+print("Columns names after renaming: ", df.columns.to_list())
+```
+
+5. Mendefinisikan feature yang dipilih
+
+```
+features_selected = ["Course_Name", "Course_Description", "Skills", "Difficulty_Level"]
+```
+
+6. membuat dataset baru yang memiliki kolom sesuai feature yang dipilih
+
+```
+new_df = df[features_selected]
+new_df.head()
+```
+
+7. Menggabungkan konten semua fitur untuk membentuk satu fitur, menampilkan 5 baris pertama dataset yang sudah diolah tersebut
+
+```
+new_df["description_key_words"] = ['' for i in range(new_df.shape[0])]
+for col in features_selected:
+    new_df["description_key_words"] += [' ' for i in range(new_df.shape[0])] + new_df[col]
+new_df.head()
+```
+
+8. Dataset dibuat supaya hanya memiliki kolom Course_Name dan description_key_words
+
+```
+new_df = new_df[["Course_Name", "description_key_words"]]
+new_df
+```
+
+9. Menampilkan isi baris ke 5 dari kolom "description_key_words"
+
+```
+new_df["description_key_words"].iloc[5]
+```
 
 ## Modeling
 Tahapan ini membahas mengenai model sisten rekomendasi yang Anda buat untuk menyelesaikan permasalahan. Sajikan top-N recommendation sebagai output.
