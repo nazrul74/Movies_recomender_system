@@ -144,7 +144,7 @@ new_df
 new_df["description_key_words"].iloc[5]
 ```
 
-## Modeling
+## Modeling and Results
 Sistem rekomendasi untuk menyelesaikan permasalahan ini dibuat berbasis konten. 
 
 1. Mendefinisikan my_lematizer dan mendefinisikan fungsi PreprocessText
