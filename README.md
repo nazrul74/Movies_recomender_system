@@ -46,7 +46,14 @@ Berikut penjelasan mengenai variabel-variabel pada kolom dataset:
 | Skills | skill yang akan dipelajari |
 
 **Rubrik/Kriteria Tambahan (Opsional)**:
-- Melakukan beberapa tahapan yang diperlukan untuk memahami data, contohnya teknik visualisasi data beserta insight atau exploratory data analysis.
+Beberapa tahapan yang dilakukan untuk memahami data, antara lain:
+1. Mencari ukuran dataset:
+
+```
+print("Size of dataset: ", df.shape)
+```
+
+3. 
 
 ## Data Preparation
 Teknik data preparation yang dilakukan terdiri dari: 
