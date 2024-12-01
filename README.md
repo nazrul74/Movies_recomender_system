@@ -101,7 +101,7 @@ def rename_col(col_name):
     return col_name
 ```
 
-4. Menampilkan nama kolom sebelum rename, melakukan renama nama kolom dan menampilkan nama kolom setelah rename:
+4. Menampilkan nama kolom sebelum rename, melakukan rename nama kolom dan menampilkan nama kolom setelah rename:
 
 ```
 print("Columns names before renaming: ", df.columns.to_list())
