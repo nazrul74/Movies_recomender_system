@@ -49,7 +49,21 @@ Berikut penjelasan mengenai variabel-variabel pada kolom dataset:
 - Melakukan beberapa tahapan yang diperlukan untuk memahami data, contohnya teknik visualisasi data beserta insight atau exploratory data analysis.
 
 ## Data Preparation
-Pada bagian ini Anda menerapkan dan menyebutkan teknik data preparation yang dilakukan. Teknik yang digunakan pada notebook dan laporan harus berurutan.
+Teknik data preparation yang dilakukan terdiri dari: 
+1. Menghilangkan baris yang terdapat duplikasi dengan baris lain, kemudian melakukan pengecekan apakah masih ada baris yang merupakan duplikasi dari baris lain:
+
+```
+df.drop_duplicates(inplace=True)
+df.duplicated().sum()
+```
+
+2. Cek nama kolom di dataset 'df'
+
+```
+df.columns
+```
+
+3. 
 
 **Rubrik/Kriteria Tambahan (Opsional)**: 
 - Menjelaskan proses data preparation yang dilakukan
