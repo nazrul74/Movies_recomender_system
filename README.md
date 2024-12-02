@@ -47,16 +47,18 @@ Berikut penjelasan mengenai variabel-variabel pada kolom dataset:
 Beberapa tahapan yang dilakukan untuk memahami data, antara lain:
 1. Mencari ukuran dataset:
 
-```
-print("Size of dataset: ", df.shape)
-```
+<p align="center">
+  <img src="https://github.com/nazrul74/courses_recomender_system/blob/main/img/size.JPG?raw=true"/>
+</p>
+
 Dari coding di atas diperoleh dataset tersebut memiliki 3522 baris dan 7 kolom.
 
 2. Mencari jumlah baris yang ada duplikasi dengan baris yang lain:
 
-```
-print("Number of duplicated rows: ", df.duplicated().sum())
-```
+<p align="center">
+  <img src="https://github.com/nazrul74/courses_recomender_system/blob/main/img/df_duplicate.JPG?raw=true"/>
+</p>
+
 Dari coding di atas, terdapat 98 baris yang merupakan duplikasi dari baris yang lain.
 
 3. Menampilkan tipe data setiap kolom pada dataset "df" seperti pada gambar berikut.
