@@ -224,13 +224,21 @@ def course_id_recommended(description, vectorizer, vectors, number_of_recommenda
     # Membalikkan urutan
     reverse_ordered_similars_vectors = [index for index in reversed(ordered_similars_vectors)]
 
-    # Sejumlah indices rekomendasi dipilih berdasarkan pada koefiesien similaritay tertinggi
+    # Top number_of_recommendation rekomendasi dipilih berdasarkan pada koefiesien similaritay tertinggi
     best_indexs = reverse_ordered_similars_vectors[1:number_of_recommendation]
 
     return best_indexs
 ```
 
-Pada modeling ini digunakan fungsi cosine similarity dari scikit-learn. Cosine similarity dihitung menggunakan rumus sebagai berikut [Understanding Cosine Similarity in Python with Scikit-Learn](https://memgraph.com/blog/cosine-similarity-python-scikit-learn):
+Pada fungsi course_id_recommended, terdiri dari beberapa fungsi lain, yaitu 
+- preprocess text
+- transformasi vectorizer
+- menghitung similarity dengan vektor feature yang lain menggunakan cosine_similarity
+- Mengurutkan nilai similarity dengan urutan ascending (Hasilnya berupa suatu list indices)
+- Membalikkan urutan
+- Top number_of_recommendation rekomendasi dipilih berdasarkan pada koefiesien similaritay tertinggi. Dalam hal ini, secara default, number_of_recommendation sama dengan lima rekomendasi. 
+
+Pada fungsi tersebut digunakan fungsi cosine similarity dari scikit-learn. Cosine similarity dihitung menggunakan rumus sebagai berikut [Understanding Cosine Similarity in Python with Scikit-Learn](https://memgraph.com/blog/cosine-similarity-python-scikit-learn):
 
 <p align="center">
   <img src="https://github.com/nazrul74/courses_recomender_system/blob/main/img/cosine_similarity.JPG?raw=true"/>
