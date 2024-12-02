@@ -4,9 +4,7 @@
 
 Tahun 2021 telah terjadi pandemi Covid-19. Pada masa pandemi ini, banyak kuliah maupun pelatihan yang tidak dapat dilaksankan secara offline, sehingga lebih banyak dilaksanakan secara online untuk pencegahan penyebaran Covid-19 tersebut. Hal ini mendorong munculnya cukup banyak fasilitas MOOC (Massive Open Online Courses). Dengan tersedianya banyak sumber daya belara secara online tersebut baik yang berbayar maupun gratis, para pembelajar memiliki cukup banyak pilihan course yang perlu dipelajari. Karena itu diperlukan suatu sistem yang dapat memberikan rekomendasi course yang sesuai dengan siswa tersebut. Proyek ini dilaksanakan untuk memberikan rekomendasi course  kepada siswa berdasarkan Keterampilan dan Tingkat Kesulitan yang dipilih oleh siswa. Sistem rekomendasi course yang dibuat menggunakan pendekatan content-based filtering. 
 
-**Rubrik/Kriteria Tambahan (Opsional)**:
-- Proyek ini perlu dilaksanakan untuk memberikan rekomendasi course yang sesuai dengan kata kunci yang diberikan oleh pengguna sehingga diharapkan dapat membantu siswa dalam memilih course di antara pilihan yang cukup banyak tersebut.
-- Hasil-hasil riset yang terkait dengan projek ini antara lain adalah yang dilakukan oleh [Zhen and Wang 2024](https://doi.org/10.1016/j.heliyon.2024.e38907), [Zhao et al. 2024](https://doi.org/10.1016/j.procs.2024.08.255), [Ma et al. 2024](https://doi.org/10.1016/j.ipm.2024.103750).
+Proyek ini perlu dilaksanakan untuk memberikan rekomendasi course yang sesuai dengan kata kunci yang diberikan oleh pengguna sehingga diharapkan dapat membantu siswa dalam memilih course di antara pilihan yang cukup banyak tersebut. Sistem rekomendasi course dapat dikembangkan berbasis deep learning [Zhen and Wang 2024](https://doi.org/10.1016/j.heliyon.2024.e38907), [Zhao et al. 2024](https://doi.org/10.1016/j.procs.2024.08.255), dan dapat juga diintegrasikan dengan pengetahuan yang telah dimiliki oleh pengguna [Ma et al. 2024](https://doi.org/10.1016/j.ipm.2024.103750).
   
 **Referensi:**
 1. Ma, Wenjun, Wen Chen, Liuxing Lu, and Xiaomao Fan. 2024. “Integrating Learners’ Knowledge Background to Improve Course Recommendation Fairness: A Multi-Graph Recommendation Method Based on Contrastive Learning.” Information Processing & Management 61 (4): 103750. https://doi.org/10.1016/j.ipm.2024.103750.
@@ -52,30 +50,37 @@ Beberapa tahapan yang dilakukan untuk memahami data, antara lain:
 ```
 print("Size of dataset: ", df.shape)
 ```
+Dari coding di atas diperoleh dataset tersebut memiliki 3522 baris dan 7 kolom.
 
 2. Mencari jumlah baris yang ada duplikasi dengan baris yang lain:
 
 ```
 print("Number of duplicated rows: ", df.duplicated().sum())
 ```
+Dari coding di atas, terdapat 98 baris yang merupakan duplikasi dari baris yang lain.
 
-3. Menampilkan tipe data setiap kolom pada dataset "df":
+3. Menampilkan tipe data setiap kolom pada dataset "df" seperti pada gambar berikut.
 
-```
-df.info()
-```
+<p align="center">
+  <img src="https://github.com/nazrul74/courses_recomender_system/blob/main/img/df_info.JPG?raw=true"/>
+</p>
 
 4. Pengecekan jumlah variabel yang bernilai Null
 
-```
-df.isnull().sum()
-```
+<p align="center">
+  <img src="https://github.com/nazrul74/courses_recomender_system/blob/main/img/df_isnul.JPG?raw=true"/>
+</p>
 
-5. Melihat statistik dataset:
+Dari coding di atas, diperoleh bahwa dataset tersebut tidak memiliki variabel yang bernilai Null.
 
-```
-df.describe()
-```
+5. Melihat statistik dataset menggunakan coding describe dan hasilnya diperlihatkan pada gambar berikut.
+
+<p align="center">
+  <img src="https://github.com/nazrul74/courses_recomender_system/blob/main/img/df_describe.JPG?raw=true"/>
+</p>
+
+
+
 
 ## Data Preparation
 Teknik data preparation yang dilakukan terdiri dari: 
