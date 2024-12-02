@@ -230,7 +230,7 @@ def course_id_recommended(description, vectorizer, vectors, number_of_recommenda
     return best_indexs
 ```
 
-Pada fungsi course_id_recommended, terdiri dari beberapa fungsi lain, yaitu 
+Fungsi course_id_recommended terdiri dari beberapa fungsi lain secara berurutan, yaitu 
 - preprocess text
 - transformasi vectorizer
 - menghitung similarity dengan vektor feature yang lain menggunakan cosine_similarity
