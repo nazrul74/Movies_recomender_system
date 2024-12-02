@@ -212,19 +212,19 @@ def course_id_recommended(description, vectorizer, vectors, number_of_recommenda
     # preprocess text
     description = [PreprocessText(description)]
 
-    # do vectorization
+    # Melakukan vectorization
     vect = vectorizer.transform(description)
 
-    # compute similarity with other feature vectors
+    # menghitung similarity dengan vektor feature yang lain
     similars_vectors = cosine_similarity(vect, vectors)[0]
 
-    # We sort the similarity values in ascending order(The result is a list of indices)
+    # Mengurutkan nilai similarity dengan urutan ascending (Hasilnya berupa suatu list indices)
     ordered_similars_vectors = list(similars_vectors.argsort())
 
-    # We reverse to order
+    # Membalikkan urutan
     reverse_ordered_similars_vectors = [index for index in reversed(ordered_similars_vectors)]
 
-    # We select the number_of_recommendation indices corresponding to the highest similarity coeficients
+    # Sejumlah indices rekomendasi dipilih berdasarkan pada koefiesien similaritay tertinggi
     best_indexs = reverse_ordered_similars_vectors[1:number_of_recommendation]
 
     return best_indexs
