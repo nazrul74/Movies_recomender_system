@@ -139,10 +139,7 @@ new_df
 new_df["description_key_words"].iloc[5]
 ```
 
-## Modeling and Results
-Sistem rekomendasi untuk menyelesaikan permasalahan ini dibuat berbasis konten. 
-
-1. Mendefinisikan my_lematizer dan mendefinisikan fungsi PreprocessText
+9. Mendefinisikan my_lematizer dan mendefinisikan fungsi PreprocessText
 
 ```
 my_lematizer = WordNetLemmatizer()
@@ -177,35 +174,38 @@ def PreprocessText(text):
     return cleaned_text
 ```
 
-2. Download 'wordnet' dan 'omw-1.4' dari nltk
+10. Download 'wordnet' dan 'omw-1.4' dari nltk
 
 ```
 nltk.download('wordnet')
 nltk.download('omw-1.4')
 ```
 
-3. Menerapkan pemrosesan teks pada description_key_words dan menampilkan hasilnya pada iloc 5
+11. Menerapkan pemrosesan teks pada description_key_words dan menampilkan hasilnya pada iloc 5
 
 ```
 new_df["description_key_words"] = new_df["description_key_words"].apply(PreprocessText)
 new_df["description_key_words"].iloc[5]
 ```
 
-4. Vectorization
+12. Vectorization
 
 ```
 vectorizer = CountVectorizer(max_features=10000, stop_words='english')
 vectors = vectorizer.fit_transform(new_df["description_key_words"]).toarray()
 ```
 
-5. Menampilkan bentuk matriks feature dan ukuran kamus
+13. Menampilkan bentuk matriks feature dan ukuran kamus
 
 ```
 print("Shape of feature  matrix: ", vectors.shape)
 print("Vocabulary size : ", len(vectorizer.vocabulary_))
 ```
 
-6. Membuat fungsi course_id_recommended
+## Modeling and Results
+Sistem rekomendasi untuk menyelesaikan permasalahan ini dibuat berbasis konten. 
+
+1. Membuat fungsi course_id_recommended
 
 ```
 def course_id_recommended(description, vectorizer, vectors, number_of_recommendation=5):
@@ -230,7 +230,7 @@ def course_id_recommended(description, vectorizer, vectors, number_of_recommenda
     return best_indexs
 ```
 
-7. Membuat fungsi recommend_me
+2. Membuat fungsi recommend_me
 
 ```
 def recommend_me(description):
@@ -246,7 +246,7 @@ def recommend_me(description):
         print("Tidak ada course yang direkomendasikan ke anda")
 ```
 
-8. Menampikan top 9 course yang direkomendasikan ke user dari kata kunci "Python programming
+3. Menampikan top 9 course yang direkomendasikan ke user dari kata kunci "Python programming
 
 ```
 recommend_me("Python programming")
