@@ -258,4 +258,4 @@ Dari coding di atas, muncul top 9 courses yang direkomendasikan, yaitu:
 </p>
 
 ## Evaluation
-Dari hasil pengujian di atas, diperoleh bahwa 9 course yang direkomendasikan semuanya mengandung kata "Python", sehingga dapat diperoleh tingkat kebenaran rekomendasi tersebut adalah sebesar 9 / 9 atau 100% benar.
+Dari hasil pengujian di atas, diperoleh bahwa 9 course yang direkomendasikan semuanya mengandung kata "Python", sehingga dapat diperoleh tingkat kebenaran rekomendasi tersebut adalah sebesar 9 / 9 atau 100% benar. Evaluasi ini menunjukkan bahwa proyek yang dikerjakan telah dapat menjawab problem statement yang disampaikan sebelumnya. Goals yang diharapkan juga telah berhasil dicapai. Solution statement berupa sistem rekomendasi berbasis konten telah berhasil menyelesaikan masalah yang dibahas sebelumnya.
