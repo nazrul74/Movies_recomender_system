@@ -23,8 +23,7 @@ Problem statement pada proyek ini:
 
 ### Goals
 
-Tujuan proyek ini:
-- memberikan rekomendasi course yang dapat diambil sesuai dengan kata kunci yang diberikan oleh pengguna berbasis content.
+Tujuan proyek ini adalah untuk memberikan rekomendasi course yang dapat diambil sesuai dengan kata kunci yang diberikan oleh pengguna berbasis content.
 
 ## Solution statements
 - Pada proyek ini, diajukan penyelesaian masalah tersebut dengan sistem rekomendasi berbasis konten.
@@ -43,8 +42,7 @@ Berikut penjelasan mengenai variabel-variabel pada kolom dataset:
 | Course Description | Deskripsi course   |
 | Skills | skill yang akan dipelajari |
 
-**Rubrik/Kriteria Tambahan (Opsional)**:
-Beberapa tahapan yang dilakukan untuk memahami data, antara lain:
+Beberapa tahapan yang dilakukan untuk memahami dataset pada proyek ini, antara lain adalah:
 1. Mencari ukuran dataset:
 
 <p align="center">
@@ -231,6 +229,12 @@ def course_id_recommended(description, vectorizer, vectors, number_of_recommenda
 
     return best_indexs
 ```
+
+Pada modeling ini digunakan fungsi cosine similarity dari scikit-learn. Cosine similarity dihitung menggunakan rumus sebagai berikut [Understanding Cosine Similarity in Python with Scikit-Learn](https://memgraph.com/blog/cosine-similarity-python-scikit-learn):
+
+<p align="center">
+  <img src="https://github.com/nazrul74/courses_recomender_system/blob/main/img/cosine_similarity.JPG?raw=true"/>
+</p>
 
 2. Membuat fungsi recommend_me
 
