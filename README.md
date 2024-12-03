@@ -238,7 +238,7 @@ Fungsi course_id_recommended terdiri dari beberapa fungsi lain secara berurutan,
 - Membalikkan urutan
 - Top number_of_recommendation rekomendasi dipilih berdasarkan pada koefiesien similaritay tertinggi. Dalam hal ini, secara default, number_of_recommendation sama dengan lima rekomendasi. 
 
-Pada fungsi tersebut digunakan fungsi cosine similarity dari scikit-learn. Cosine similarity dihitung menggunakan rumus sebagai berikut [Understanding Cosine Similarity in Python with Scikit-Learn](https://memgraph.com/blog/cosine-similarity-python-scikit-learn):
+**Description** pada fungsi tersebut merupakan kata kunci yang akan dicari similaritynya dengan vector database yang ada. Pada fungsi tersebut digunakan fungsi **cosine similarity** dari scikit-learn. Cosine similarity dihitung menggunakan rumus sebagai berikut [Understanding Cosine Similarity in Python with Scikit-Learn](https://memgraph.com/blog/cosine-similarity-python-scikit-learn):
 
 <p align="center">
   <img src="https://github.com/nazrul74/courses_recomender_system/blob/main/img/cosine_similarity.JPG?raw=true"/>
@@ -259,6 +259,8 @@ def recommend_me(description):
     else:
         print("Tidak ada course yang direkomendasikan ke anda")
 ```
+
+Pada fungsi recommend_me terdapat parameter _description_ yang merupakan kata kunci untuk pemberian rekomendasi tersebut. Pada fungsi ini akan ditampilan sejumlah (number_of_recommendation-1) rekomendasi course terbaik yang berkaitan dengan kata kunci yang diberikan.
 
 3. Menampikan top 9 course yang direkomendasikan ke user dari kata kunci "Python programming
 
